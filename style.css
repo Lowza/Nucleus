@@ -8,12 +8,16 @@ body {
     background-color: hsl(12, 10%, 20%);
 }
 
-P, h1 {
+h1{
+    padding: 50px;
+}
+
+P, h1, h2 {
     font-family: sans-serif;
     color: hsl(106, 100%, 85%);
     text-align: center;
-    padding: 20px;
     line-height: 2em;
+    margin: 0px 100px;
 }
 
 /* LINKS */
