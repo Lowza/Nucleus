@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* LINKS */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: cyan;
+}
+
+a:active{
+    color: gray;
+}
+
+/* HEADER SECTION */
+
+header ul {
+    list-style: none;
+    text-align: center;
+    margin: auto;
+    color: white;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+header li {
+    padding: 20px;
+    display: inline-flex;
+}
