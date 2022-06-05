@@ -4,15 +4,27 @@
     box-sizing: border-box;
   }
 
+body {
+    background-color: hsl(12, 10%, 20%);
+}
+
+P, h1 {
+    font-family: sans-serif;
+    color: hsl(106, 100%, 85%);
+    text-align: center;
+    padding: 20px;
+    line-height: 2em;
+}
+
 /* LINKS */
 
 a {
     text-decoration: none;
-    color: white;
+    color: hsl(106, 100%, 85%);
 }
 
 a:hover {
-    color: cyan;
+    color: hsl(221, 100%, 61%);
 }
 
 a:active{
@@ -26,7 +38,7 @@ header ul {
     text-align: center;
     margin: auto;
     color: white;
-    background-color: black;
+    background-color: hsl(12, 10%, 10%);
     font-family: sans-serif;
 }
 
