@@ -18,8 +18,9 @@
     </header>
     <main>
         <h1>CSS</h1>
-        <h2>Resetting Defaults</h2>
-        <p>All major web browsers have a default stylesheet they use in the absence of an external stylesheet. 
+        <p>
+        <strong>Resetting Defaults</strong><br><br>
+        All major web browsers have a default stylesheet they use in the absence of an external stylesheet. 
 These default stylesheets are known as user agent stylesheets. In this case, the term user agent is a 
 technical term for the browser.
 User agent stylesheets often have default CSS rules that set default values for padding and margin. 
@@ -31,9 +32,192 @@ Example:
     margin: 0;
     padding: 0;
   }
+
+  Box Model: Border-Box<br>
+  We can reset the entire box model and specify a new one: border-box. <br>
+  The default value of this property is content-box.<br>
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  The box model comprises a set of properties used to create space around and between HTML elements.<br>
+  The height and width of a content area can be set in pixels or percentages.<br>
+  Borders surround the content area and padding of an element. The color, style, and thickness of a border can be set with CSS properties.<br>
+  Padding is the space between the content area and the border. It can be set in pixels or percent.<br>
+  Margin is the amount of spacing outside of an element’s border.<br>
+  Horizontal margins add, so the total space between the borders of adjacent elements is equal to the sum of the right margin of one element and the left margin of the adjacent element.<br>
+  Vertical margins collapse, so the space between vertically adjacent elements is equal to the larger margin.<br>
+  margin: 0 auto horizontally centers an element inside of its parent content area, if it has a width.<br>
+  The overflow property can be set to display, hide, or scroll, and dictates how HTML will render content that overflows its parent’s content area.<br>
+  The visibility property can hide or show elements.<br>
+  
+  In order to center an element, a width must be set for that element. Otherwise, the width of the div will be automatically set to the full width of its containing element, like the &lt;body&gt;, for example. It’s not possible to center an element that takes up the full width of the page, since the width of the page can change due to display and/or browser window size.<br>
+  
+  <br><strong>Text</strong><br><br>
+  The font-family property defines the typeface of an element.<br>
+  font-size controls the size of text displayed.<br>
+  font-weight defines how thin or thick text is displayed.<br>
+  The text-align property places text in the left, right, or center of its parent container.<br>
+  Text can have two different color attributes: color and background-color. color defines the color of the text, while background-color defines the color behind the text.<br>
+  CSS can make an element transparent with the opacity property.<br>
+  CSS can also set the background of an element to an image with the background-image property.<br>
+  The !important flag will override any style, however it should almost never be used, as it is extremely difficult to override.<br>
+  
+  <br><strong>Typography</strong><br><br>
+  Typography is the art of arranging text on a page.<br>
+  Text can appear bold or thin with the font-weight property.<br>
+  Text can appear in italics with the font-style property.<br>
+  The vertical spacing between lines of text can be modified with the line-height property.<br>
+  Serif fonts have extra details on the ends of each letter. Sans-Serif fonts do not.<br>
+  Fallback fonts are used when a certain font is not installed on a user’s computer.<br>
+  The word-spacing property changes how far apart individual words are.<br>
+  The letter-spacing property changes how far apart individual letters are.<br>
+  The text-align property changes the horizontal alignment of text.<br>
+  Google Fonts provides free fonts that can be used in an HTML file with the &lt;link&gt; tag or the @font-face property.<br>
+  Local fonts can be added to a document with the @font-face property and the path to the font’s source.<br>
+  
+  <br><strong>Colors</strong><br><br>
+  Named colors—there are more than 140 named colors, which you can review here.<br>
+  Hexadecimal or hex colors<br>
+  Hexadecimal is a number system with has sixteen digits, 0 to 9 followed by “A” to “F”.<br>
+  Hex values always begin with # and specify values of red, blue, and green using hexadecimal numbers such as #23F41A.<br>
+  Six-digit hex values with duplicate values for each RGB value can be shorted to three digits.<br>
+  RGB colors use the rgb() syntax with one value for red, one value for blue and one value for green.<br>
+  RGB values range from 0 to 255 and look like this: rgb(7, 210, 50).<br>
+  HSL stands for hue (the color itself), saturation (the intensity of the color), and lightness (how light or dark a color is).<br>
+  Hue ranges from 0 to 360 and saturation and lightness are both represented as percentages like this: hsl(200, 20%, 50%).<br>
+  You can add opacity to color in RGB and HSL by adding a fourth value, a, which is represented as a percentage.<br>
+  
+  <br><strong>Position</strong><br><br>
+  The position property allows you to specify the position of an element.<br>
+  When set to relative, an element’s position is relative to its default position on the page.<br>
+  When set to absolute, an element’s position is relative to its closest positioned parent element. It can be pinned to any part of the web page, but the element will still move with the rest of the document when the page is scrolled.<br>
+  When set to fixed, an element’s position can be pinned to any part of the web page. The element will remain in view no matter what.<br>
+  When set to sticky, an element can stick to a defined offset position when the user scrolls its parent container.<br>
+  The z-index of an element specifies how far back or how far forward an element appears on the page when it overlaps other elements.<br>
+  The display property allows you to control how an element flows vertically and horizontally in a document.<br>
+  inline elements take up as little space as possible, and they cannot have manually adjusted width or height.<br>
+  block elements take up the width of their container and can have manually adjusted heights.<br>
+  inline-block elements can have set width and height, but they can also appear next to each other and do not take up their entire container width.<br>
+  The float property can move elements as far left or as far right as possible on a web page.<br>
+  You can clear an element’s left or right side (or both) using the clear property.<br>
+  
+  <br><strong>Flexbox</strong><br><br>
+  display: flex changes an element to a block-level container with flex items inside of it.<br>
+  display: inline-flex allows multiple flex containers to appear inline with each other.<br>
+  justify-content is used to space items along the main axis.<br>
+  align-items is used to space items along the cross axis.<br>
+  flex-grow is used to specify how much space (and in what proportions) flex items absorb along the main axis.<br>
+  flex-shrink is used to specify how much flex items shrink and in what proportions along the main axis.<br>
+  flex-basis is used to specify the initial size of an element styled with flex-grow and/or flex-shrink.<br>
+  flex is used to specify flex-grow, flex-shrink, and flex-basis in one declaration.<br>
+  flex-wrap specifies that elements should shift along the cross axis if the flex container is not large enough.<br>
+  align-content is used to space rows along the cross axis.<br>
+  flex-direction is used to specify the main and cross axes.<br>
+  flex-flow is used to specify flex-wrap and flex-direction in one declaration.<br>
+  Flex containers can be nested inside of each other by declaring display: flex or display: inline-flex for children of flex containers.<br>
+  
+  <br><strong>Grid</strong><br><br>
+  grid-template-columns defines the number and sizes of the columns of the grid<br>
+  grid-template-rows defines the number and sizes of the rows of the grid<br>
+  grid-template is a shorthand for defining both grid-template-columns and grid-template-rows in one line<br>
+  row-gap puts blank space between the rows of the grid<br>
+  column-gap puts blank space between the columns of the grid<br>
+  gap is a shorthand for defining both row-gap and column-gap in one line<br>
+  grid-row-start and grid-row-end makes elements span certain rows of the grid<br>
+  grid-column-start and grid-column-end makes elements span certain columns of the grid<br>
+  grid-area is a shorthand for grid-row-start, grid-column-start, grid-row-end, and grid-column-end, all in one line<br>
+  
+  grid-area takes four values separated by slashes. The order is important! This is how grid-area will interpret those values.<br>
+  
+  grid-row-start<br>
+  grid-column-start<br>
+  grid-row-end<br>
+  grid-column-end<br>
+  
+  grid-template-areas specifies grid named grid areas<br>
+  grid layouts are two-dimensional: they have a row, or inline, axis and a column, or block, axis.<br>
+  justify-items specifies how individual elements should spread across the row axis<br>
+  justify-content specifies how groups of elements should spread across the row axis<br>
+  justify-self specifies how a single element should position itself with respect to the row axis<br>
+  align-items specifies how individual elements should spread across the column axis<br>
+  align-content specifies how groups of elements should spread across the column axis<br>
+  align-self specifies how a single element should position itself with respect to the column axis<br>
+  grid-auto-rows specifies the height of rows added implicitly to the grid<br>
+  grid-auto-columns specifies the width of columns added implicitly to the grid<br>
+  grid-auto-flow specifies in which direction implicit elements should be created<br>
+  <br>
+  <br><strong>Grid Template Areas</strong><br><br>
+  The grid-template-areas property allows you to name sections of your web page to use as values in the grid-row-start, grid-row-end, grid-column-start,grid-column-end, and grid-area properties. This property is declared on grid containers.<br>
+  
+  &lt;div class="container"&gt;<br>
+  &lt;header&gt;Welcome!&lt;/header&gt;<br>
+  &lt;nav&gt;Links!&lt;/nav&gt;<br>
+  &lt;section class="info"&gt;Info!&lt;/section&gt;<br>
+  &lt;section class="services"&gt;Services!&lt;/section&gt;<br>
+  &lt;footer&gt;Contact us!&lt;/footer&gt;
+  &lt;/div&gt;<br>
+  
+  .container {
+    display: grid; max-width: 900px; position: relative; margin: auto;<br>
+    grid-template-areas: "head head"<br>
+                         "nav nav" <br>
+                         "info services"<br>
+                         "footer footer";<br>
+    grid-template-rows: 300px 120px 800px 120px;<br>
+    grid-template-columns: 1fr 3fr;}<br>
+  <br>
+  header {grid-area: head;} <br>
+  nav {grid-area: nav;} <br>
+  .info {grid-area: info;} <br>
+  .services {grid-area: services;} <br>
+  footer {grid-area: footer;} <br>
+  <br>
+  <br><strong>Relative Measurements</strong><br><br>
+  Content on a website can be sized relative to other elements on the page using relative measurements.<br>
+  The unit of em sizes font relative to the font size of a parent element.<br>
+  The unit of rem sizes font relative to the font size of a root element. That root element is the &lt;html&gt; element.<br>
+  Percentages are commonly used to size box-model features, like the width, height, padding, or margin of an element.<br>
+  When percentages are used to size width and height, child elements will be sized relative to the dimensions of their parent (remember that parent dimensions must first be set).<br>
+  Percentages can be used to set padding and margin. Horizontal and vertical padding and margin are set relative to the width of a parent element.<br>
+  The minimum and maximum width of elements can be set using min-width and max-width.<br>
+  The minimum and maximum height of elements can be set using min-height and max-height.<br>
+  When the height of an image or video is set, then its width can be set to auto so that the media scales proportionally. Reversing these two properties and values will also achieve the same result.<br>
+  A background image of an HTML element will scale proportionally when its background-size property is set to cover.<br>
+  
+  <br><strong>Responsive Design</strong><br><br>
+  When a website responds to the size of the screen it’s viewed on, it’s called a responsive website.<br>
+  You can write media queries to help with different screen sizes.<br>
+  Adding the viewport &lt;meta&gt; tag to our code allows us to control the width and scaling of the viewport so that it’s sized and scaled correctly on all devices.<br>
+  Media queries require media features. Media features are the conditions that must be met to render the CSS within a media query.<br>
+  Media features can detect many aspects of a user’s browser, including the screen’s width, height, resolution, orientation, and more.<br>
+  The and operator requires multiple media features to be true at once.<br>
+  A comma separated list of media features only requires one media feature to be true for the code within to be applied.<br>
+  The best practice for identifying where media queries should be set is by resizing the browser to determine where the content naturally breaks. Natural breakpoints are found by resizing the browser.<br>
+  
+  <br><strong>Viewport Meta Tag</strong><br><br>
+  The viewport is the total viewable area for a user, this area varies depending on device. The viewport is smaller on a mobile device and larger on a desktop.<br>
+  Based on the size of the viewport, the meta tag (&lt;meta&gt;) is used to instruct the browser on how to render the webpage’s scale and dimensions. For instance, say if a web page is 960px and the device is 320px wide. Adding the viewport meta tag will squish the content down until it is 320px — there is no need for the user to zoom out and view the whole page!<br>
+  Inside the &lt;head&gt; element, we will find where the &lt;meta&gt; tag syntax is implemented:<br>
+  
+  &lt;!DOCTYPE html&gt; <br>
+  &lt;html lang="en"&gt; <br>
+  &lt;head&gt; <br>
+      ...<br>
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
+      ...<br>
+      &lt;/head&gt; <br>
+  We can break down the added &lt;meta&gt; tag into the following essential components:<br>
+  
+  the name="viewport" attribute: tells the browser to display the web page at the same width as its screen<br>
+  the content attribute: defines the values for the &lt;meta&gt; tag, including width and initial-scale<br>
+  the width=device-width key-value pair: controls the size of the viewport in which it sets the width of the viewport to equal the width of the device<br>
+  the initial-scale=1 key-value pair: sets the initial zoom level (Read more about scale at MDN’s viewport documentation<br>
 </p>
     </main>
+    <footer>
+        Contact: jackrlomax@gmail.com
+    </footer>
 </body>
-
-
 </html>

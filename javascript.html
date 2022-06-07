@@ -16,7 +16,109 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <h1>JavaScript</h1>
+        <p>
+Data is printed, or logged, to the console, a panel that displays messages, with console.log().<br>
+We can write single-line comments with // and multi-line comments between /* and */.<br>
+There are 7 fundamental data types in JavaScript: strings, numbers, booleans, null, undefined, symbol, and object.<br>
+Numbers are any number without quotes: 23.8879<br>
+Strings are characters wrapped in single or double quotes: 'Sample String'<br>
+The built-in arithmetic operators include +, -, *, /, and %.<br>
+Objects, including instances of data types, can have properties, stored information. The properties are denoted with a . after the name of the object, for example: 'Hello'.length.<br>
+Objects, including instances of data types, can have methods which perform actions. Methods are called by appending the object or instance with a period, the method name, and parentheses. For example: 'hello'.toUpperCase().<br>
+We can access properties and methods by using the ., dot operator.<br>
+Built-in objects, including Math, are collections of methods and properties that JavaScript provides.<br>
+<br><strong>Variables</strong><br><br>
+Variables hold reusable data in a program and associate it with a name.<br>
+Variables are stored in memory.<br>
+The var keyword is used in pre-ES6 versions of JS.<br>
+let is the preferred way to declare a variable when it can be reassigned, and const is the preferred way to declare a variable with a constant value.<br>
+Variables that have not been initialized store the primitive data type undefined.<br>
+Mathematical assignment operators make it easy to calculate a new value and assign it to the same variable.<br>
+The + operator is used to concatenate strings including string values held in variables.<br>
+In ES6, template literals use backticks ` and ${} to interpolate values into a string.<br>
+The typeof keyword returns the data type (as a string) of a value.<br>
+<br><strong>Conditionals</strong><br><br>
+An if statement checks a condition and will execute a task if that condition evaluates to true.<br>
+if...else statements make binary decisions and execute different code blocks based on a provided condition.<br>
+We can add more conditions using else if statements.<br>
+Comparison operators, including &lt;, &gt;, &lt;=, &gt;=, ===, and !== can compare two values.<br>
+The logical and operator, &&, or “and”, checks if both provided expressions are truthy.<br>
+The logical operator ||, or “or”, checks if either provided expression is truthy.<br>
+The bang operator, !, switches the truthiness and falsiness of a value.<br>
+The ternary operator is shorthand to simplify concise if...else statements.<br>
+A switch statement can be used to simplify the process of writing multiple else if statements. The break keyword stops the remaining cases from being checked and executed in a switch statement.<br>
+<br><strong>Runtime Environment</strong><br><br>
+A runtime environment is where your program will be executed. JavaScript code may be executed in one of two runtime environments:<br>
+a browser’s runtime environment<br>
+the Node runtime environment<br>
+In each of these environments, different data values and functions are available, and these differences help distinguish front-end applications from back-end applications.<br>
+<br><strong>Front-end / Back-end</strong><br><br>
+Front-end JavaScript applications are executed in a browser’s runtime environment and have access to the window object.<br>
+Back-end JavaScript applications are executed in the Node runtime environment and have access to the file system, databases, and networks attached to the server.<br>
+<br><strong>Arrays</strong><br><br>
+Arrays are lists that store data in JavaScript.<br>
+Arrays are created with brackets [].<br>
+Each item inside of an array is at a numbered position, or index, starting at 0.<br>
+We can access one item in an array using its index, with syntax like: myArray[0].<br>
+We can also change an item in an array using its index, with syntax like myArray[0] = 'new string';<br>
+Arrays have a length property, which allows you to see how many items are in an array.<br>
+Arrays have their own methods, including .push() and .pop(), which add and remove items from an array, respectively.<br>
+Arrays have many methods that perform different tasks, such as .slice() and .shift(), you can find documentation at the Mozilla Developer Network website.<br>
+Some built-in methods are mutating, meaning the method will change the array, while others are not mutating. You can always check the documentation.<br>
+Variables that contain arrays can be declared with let or const. Even when declared with const, arrays are still mutable. However, a variable declared with const cannot be reassigned.<br>
+Arrays mutated inside of a function will keep that change even outside the function.<br>
+Arrays can be nested inside other arrays.<br>
+To access elements in nested arrays chain indices using bracket notation.<br>
+<br><strong>Loops</strong><br><br>
+Loops perform repetitive actions so we don’t have to code that process manually every time.<br>
+How to write for loops with an iterator variable that increments or decrements<br>
+How to use a for loop to iterate through an array<br>
+A nested for loop is a loop inside another loop.<br>
+while loops allow for different types of stopping conditions.<br>
+Stopping conditions are crucial for avoiding infinite loops.<br>
+do...while loops run code at least once— only checking the stopping condition after the first execution.<br>
+The break keyword allows programs to leave a loop during the execution of its block.<br>
+<br><strong>Objects</strong><br><br>
+Objects store collections of key-value pairs.<br>
+Each key-value pair is a property—when a property is a function it is known as a method.<br>
+An object literal is composed of comma-separated key-value pairs surrounded by curly braces.<br>
+You can access, add or edit a property within an object by using dot notation or bracket notation.<br>
+We can add methods to our object literals using key-value syntax with anonymous function expressions as values or by using the new ES6 method syntax.<br>
+We can navigate complex, nested objects by chaining operators.<br>
+Objects are mutable—we can change their properties even when they’re declared with const.<br>
+Objects are passed by reference— when we make changes to an object passed into a function, those changes are permanent.<br>
+We can iterate through objects using the For...in syntax.<br>
+<br><strong>Methods</strong><br><br>
+The object that a method belongs to is called the calling object.<br>
+The this keyword refers to the calling object and can be used to access properties of the calling object.<br>
+Methods do not automatically have access to other internal properties of the calling object.<br>
+The value of this depends on where the this is being accessed from.<br>
+We cannot use arrow functions as methods if we want to access other internal properties.<br>
+JavaScript objects do not have built-in privacy, rather there are conventions to follow to notify other developers about the intent of the code.<br>
+The usage of an underscore before a property name means that the original developer did not intend for that property to be directly changed.<br>
+Setters and getter methods allow for more detailed ways of accessing and assigning properties.<br>
+Factory functions allow us to create object instances quickly and repeatedly.<br>
+There are different ways to use object destructuring: one way is the property value shorthand and another is destructured assignment.<br>
+As with any concept, it is a good skill to learn how to use the documentation with objects!<br>
+<br><br>
+Abstraction allows us to write complicated code in a way that’s easy to reuse, debug, and understand for human readers.<br>
+We can work with functions the same way we work with any other type of data, including reassigning them to new variables.<br>
+JavaScript functions are first-class objects, so they have properties and methods like any other object.<br>
+Functions can be passed into other functions as parameters.<br>
+A higher-order function is a function that either accepts functions as parameters, returns a function, or both.<br>
+<br><strong>Iterators</strong><br><br>
+.forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.<br>
+.map() executes the same code on every element in an array and returns a new array with the updated elements.<br>
+.filter() checks every element in an array to see if it meets certain criteria and returns a new array with the elements that return truthy for the criteria.<br>
+.findIndex() returns the index of the first element of an array that satisfies a condition in the callback function. It returns -1 if none of the elements in the array satisfies the condition.<br>
+.reduce() iterates through an array and takes the values of the elements and returns a single value.<br>
+All iterator methods take a callback function, which can be a pre-defined function, a function expression, or an arrow function.<br>
+        </p>
+    </main>
+    <footer>
+        Contact: jackrlomax@gmail.com
+    </footer>
 </body>
-
-
 </html>
