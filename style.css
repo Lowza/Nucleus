@@ -31,6 +31,12 @@ strong {
     font-size: 1.5em;
 }
 
+#welcome {
+    font-size: 2rem;
+    width: 50%;
+    margin: 25vh auto;
+}
+
 /* LINKS */
 
 a {
